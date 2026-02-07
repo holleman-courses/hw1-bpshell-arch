@@ -23,14 +23,11 @@ def build_model1():
     model = Sequential([
         layers.Flatten(input_shape=(32, 32, 3)),
 
-        layers.Dense(128),
-        layers.LeakyReLU(),
+        layers.Dense(128, activation='leaky_relu'),
 
-        layers.Dense(128),
-        layers.LeakyReLU(),
+        layers.Dense(128, activation='leaky_relu'),
 
-        layers.Dense(128),
-        layers.LeakyReLU(),
+        layers.Dense(128, activation='leaky_relu'),
 
         layers.Dense(10)  # logits, no activation
     ])
